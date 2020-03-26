@@ -4,4 +4,19 @@
 
 {% block content %}
   <p>Welcome to the home page!</p>
+
+  <form method="post">
+    <label for="user_name">Who are you?</label>
+    <input type="text" name="user_name" id="user_name"/> 
+
+    <input type="submit" value="Submit"/>
+  </form>
+
+  {% if error %}
+    <p class="warning">{{ error }}</p>
+  {% endif %}
+
+  {% if name and not error %}
+    <p>Thanks! <a href="{{ url_for('greet', name=name) }}">Go to greeting page</a></p>
+  {% endif %}
 {% endblock %}
