@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 
 setuptools.setup(
-    name="yourproject"
+    name="flaskdemo"
     version="0.0.1",
     author="your name",
     author_email="your@email.com",
