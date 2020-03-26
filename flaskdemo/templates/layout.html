@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <h1>Flask Demo</h1>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

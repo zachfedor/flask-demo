@@ -10,5 +10,6 @@ def test_config():
 def test_index(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b'Flask demo is working' in response.data
+    assert b'<h1>Flask Demo</h1>' in response.data
+    assert b'Welcome to the home page' in response.data
 

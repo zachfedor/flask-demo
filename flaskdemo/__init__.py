@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     app = Flask(__name__)
@@ -13,7 +13,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return 'Flask demo is working'
+        return render_template('homepage.html')
 
     return app
 
