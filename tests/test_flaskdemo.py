@@ -13,3 +13,8 @@ def test_index(client):
     assert b'<h1>Flask Demo</h1>' in response.data
     assert b'Welcome to the home page' in response.data
 
+
+def test_about_page(client):
+    response = client.get('/about')
+    assert b'This is a quick demo application' in response.data
+

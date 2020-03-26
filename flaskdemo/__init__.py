@@ -15,5 +15,9 @@ def create_app(test_config=None):
     def index():
         return render_template('homepage.html')
 
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
+
     return app
 
